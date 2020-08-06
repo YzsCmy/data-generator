@@ -6,15 +6,15 @@ public class Record{
     /** 机型 */
     private String type;
     /** sn前缀 */
-    private String snPrefix;
+    private String sn_prefix;
     /** mac前缀 */
-    private String macPrefix;
+    private String mac_prefix;
     /** sn开始流水号 */
-    private String snStart;
+    private String sn_start;
     /** macsn开始流水号 */
-    private String macStart;
+    private String mac_start;
     /** 生成时间 */
-    private Long createTime;
+    private Long create_time;
     /** 生成数量 */
     private Integer num;
 
@@ -34,47 +34,49 @@ public class Record{
         this.type = type;
     }
 
-    public String getSnPrefix() {
-        return snPrefix;
-    }
+    
 
-    public void setSnPrefix(String snPrefix) {
-        this.snPrefix = snPrefix;
-    }
+    public String getSn_prefix() {
+		return sn_prefix;
+	}
 
-    public String getMacPrefix() {
-        return macPrefix;
-    }
+	public void setSn_prefix(String sn_prefix) {
+		this.sn_prefix = sn_prefix;
+	}
 
-    public void setMacPrefix(String macPrefix) {
-        this.macPrefix = macPrefix;
-    }
+	public String getMac_prefix() {
+		return mac_prefix;
+	}
 
-    public String getSnStart() {
-        return snStart;
-    }
+	public void setMac_prefix(String mac_prefix) {
+		this.mac_prefix = mac_prefix;
+	}
 
-    public void setSnStart(String snStart) {
-        this.snStart = snStart;
-    }
+	public String getSn_start() {
+		return sn_start;
+	}
 
-    public String getMacStart() {
-        return macStart;
-    }
+	public void setSn_start(String sn_start) {
+		this.sn_start = sn_start;
+	}
 
-    public void setMacStart(String macStart) {
-        this.macStart = macStart;
-    }
+	public String getMac_start() {
+		return mac_start;
+	}
 
-    public Long getCreateTime() {
-        return createTime;
-    }
+	public void setMac_start(String mac_start) {
+		this.mac_start = mac_start;
+	}
 
-    public void setCreateTime(Long createTime) {
-        this.createTime = createTime;
-    }
+	public Long getCreate_time() {
+		return create_time;
+	}
 
-    public Integer getNum() {
+	public void setCreate_time(Long create_time) {
+		this.create_time = create_time;
+	}
+
+	public Integer getNum() {
         return num;
     }
 

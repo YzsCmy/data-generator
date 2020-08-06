@@ -15,12 +15,12 @@ public class RecordDao {
 
 	public int save(Connection con,Record u){
 		String sql = "INSERT INTO record VALUE(NULL,?,?,?,?,?,?,?)";
-		Object[] params={u.getType(),u.getSnPrefix(),u.getMacPrefix(),
-				u.getCreateTime(),u.getNum(),u.getSnStart(),u.getMacStart()};
+		Object[] params={u.getType(),u.getSn_prefix(),u.getMac_prefix(),
+				u.getSn_start(),u.getMac_start(),u.getCreate_time(),u.getNum()};
 		try {
-			int id = (int) query.insert(con, sql, new ScalarHandler<>(),params);
+			Object object = query.insert(con, sql, new ScalarHandler<>(),params);
+			int id = Integer.parseInt(object.toString());
 			return id;
-//			query.update(con, sql, params);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			throw new RuntimeException(e);

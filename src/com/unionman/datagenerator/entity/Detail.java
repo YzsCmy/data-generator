@@ -10,17 +10,17 @@ public class Detail{
     /** mac */
     private String mac ;
     /** sn前缀 */
-    private String snPrefix ;
+    private String sn_prefix ;
     /** mac前缀 */
-    private String macPrefix ;
+    private String mac_prefix ;
     /** sn流水号 */
-    private String snSerial ;
+    private String sn_serial ;
     /** mac流水号 */
-    private String macSerial ;
+    private String mac_serial ;
     /** 生成时间 */
-    private Long createTime ;
+    private Long create_time ;
     /** 主表id */
-    private Integer recordId ;
+    private Integer record_id ;
 
     /** 主键 */
     public Integer getId(){
@@ -54,52 +54,41 @@ public class Detail{
     public void setMac(String mac){
         this.mac = mac;
     }
-    /** sn前缀 */
-    public String getSnPrefix(){
-        return this.snPrefix;
-    }
-    /** sn前缀 */
-    public void setSnPrefix(String snPrefix){
-        this.snPrefix = snPrefix;
-    }
-    /** mac前缀 */
-    public String getMacPrefix(){
-        return this.macPrefix;
-    }
-    /** mac前缀 */
-    public void setMacPrefix(String macPrefix){
-        this.macPrefix = macPrefix;
-    }
-    /** sn流水号 */
-    public String getSnSerial(){
-        return this.snSerial;
-    }
-    /** sn流水号 */
-    public void setSnSerial(String snSerial){
-        this.snSerial = snSerial;
-    }
-    /** mac流水号 */
-    public String getMacSerial(){
-        return this.macSerial;
-    }
-    /** mac流水号 */
-    public void setMacSerial(String macSerial){
-        this.macSerial = macSerial;
-    }
-    /** 生成时间 */
-    public Long getCreateTime(){
-        return this.createTime;
-    }
-    /** 生成时间 */
-    public void setCreateTime(Long createTime){
-        this.createTime = createTime;
-    }
-    /** 主表id */
-    public Integer getRecordId(){
-        return this.recordId;
-    }
-    /** 主表id */
-    public void setRecordId(Integer recordId){
-        this.recordId = recordId;
-    }
+	public String getSn_prefix() {
+		return sn_prefix;
+	}
+	public void setSn_prefix(String sn_prefix) {
+		this.sn_prefix = sn_prefix;
+	}
+	public String getMac_prefix() {
+		return mac_prefix;
+	}
+	public void setMac_prefix(String mac_prefix) {
+		this.mac_prefix = mac_prefix;
+	}
+	public String getSn_serial() {
+		return sn_serial;
+	}
+	public void setSn_serial(String sn_serial) {
+		this.sn_serial = sn_serial;
+	}
+	public String getMac_serial() {
+		return mac_serial;
+	}
+	public void setMac_serial(String mac_serial) {
+		this.mac_serial = mac_serial;
+	}
+	public Long getCreate_time() {
+		return create_time;
+	}
+	public void setCreate_time(Long create_time) {
+		this.create_time = create_time;
+	}
+	public Integer getRecord_id() {
+		return record_id;
+	}
+	public void setRecord_id(Integer record_id) {
+		this.record_id = record_id;
+	}
+    
 }

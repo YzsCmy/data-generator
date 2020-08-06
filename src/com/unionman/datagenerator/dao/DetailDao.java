@@ -14,8 +14,8 @@ public class DetailDao {
 
 	public void save(Connection con,Detail u){
 		String sql = "INSERT INTO detail VALUE(NULL,?,?,?,?,?,?,?,?,?)";
-		Object[] params={u.getType(),u.getSn(),u.getMac(),u.getSnPrefix(),u.getMacPrefix(),
-				u.getSnSerial(),u.getMacSerial(),u.getRecordId(),u.getCreateTime()};
+		Object[] params={u.getType(),u.getSn(),u.getMac(),u.getSn_prefix(),u.getMac_prefix(),
+				u.getSn_serial(),u.getMac_serial(),u.getCreate_time(),u.getRecord_id()};
 		try {
 			query.update(con, sql, params);
 		} catch (SQLException e) {

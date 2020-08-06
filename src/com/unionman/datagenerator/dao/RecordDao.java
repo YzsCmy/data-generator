@@ -3,6 +3,7 @@ package com.unionman.datagenerator.dao;
 import com.unionman.datagenerator.entity.Record;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -12,12 +13,14 @@ public class RecordDao {
 	private QueryRunner query = new QueryRunner();
 	
 
-	public void save(Connection con,Record u){
+	public int save(Connection con,Record u){
 		String sql = "INSERT INTO record VALUE(NULL,?,?,?,?,?,?,?)";
 		Object[] params={u.getType(),u.getSnPrefix(),u.getMacPrefix(),
 				u.getCreateTime(),u.getNum(),u.getSnStart(),u.getMacStart()};
 		try {
-			query.update(con, sql, params);
+			int id = (int) query.insert(con, sql, new ScalarHandler<>(),params);
+			return id;
+//			query.update(con, sql, params);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			throw new RuntimeException(e);

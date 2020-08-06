@@ -8,7 +8,7 @@ public class Dbutils {
 	private static String url="jdbc:mysql://localhost:3306/data_generator";
 	private static String jdbcName="com.mysql.jdbc.Driver";
 	private static String userName="root";
-	private static String password="root";
+	private static String password="123456";
 	static{
 		try {
 			Class.forName(jdbcName);
